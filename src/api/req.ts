@@ -1,10 +1,9 @@
 import 'isomorphic-fetch'
 
 export class Request {
-    private readonly basicUrl = 'http://localhost:4333';
 
-    async get(apiUrl: string) {
-        const url = this.basicUrl + apiUrl;
+    async get() {
+        const url = 'https://jsonplaceholder.typicode.com/todos';
         try {
             const response = await fetch(url);
             return await response.json();

@@ -25,7 +25,7 @@ const Todolist = () => {
         <div>
             <div>todo</div>
             <NavLink to="/main">REDIRECT</NavLink>
-            {(list || []).map((item: { id: string | number; text: React.ReactNode; }) => <div key={item.id}>{item.text}</div>)}
+            {(list || []).map((item: { id: string | number; title: React.ReactNode; }) => <div key={item.id}>{item.title}</div>)}
         </div>
     );
 };
