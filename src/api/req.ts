@@ -1,9 +1,10 @@
 import 'isomorphic-fetch'
 
 export class Request {
+    private readonly basicUrl = 'https://todo-list-server-api-test.herokuapp.com/';
 
-    async get() {
-        const url = 'https://jsonplaceholder.typicode.com/todos';
+    async get(apiUrl: string) {
+        const url = this.basicUrl + apiUrl;
         try {
             const response = await fetch(url);
             return await response.json();

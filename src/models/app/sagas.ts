@@ -5,7 +5,7 @@ import {Api} from "@/api/req";
 
 function* listUpdate() {
   try {
-    const response: {id: number, completed: boolean, title: string}[] = yield Api.get();
+    const response: {id: number, checked: boolean, text: string}[] = yield Api.get('/list');
     yield put({
       type: actions.setList.type,
       payload: response,

@@ -36,7 +36,7 @@ module.exports = () => {
             ],
         },
         entry: {
-            main: './server/index.ts',
+            main: './server/index.js',
         },
         output: {
             filename: '[name].js',
