@@ -21,6 +21,9 @@ const app = express()
 const jsFiles = [];
 const worker = [];
 
+// @ts-ignore
+const port = process.env.PORT || 9001;
+
 fs.readdirSync('build/static/js').forEach(file => {
     if (file.split('.')[0] === 'sw') {
         worker.push(`/static/js/${file}`);
@@ -89,6 +92,6 @@ routes
         store.dispatch(END)
     }));
 
-app.listen(9001, () => {
-    console.log('Express server started at <http://localhost:9001>')
+app.listen(port, () => {
+    console.log(`Express server started at <http://localhost:${port}>`)
 });
