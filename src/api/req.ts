@@ -1,7 +1,7 @@
 import 'isomorphic-fetch'
 
 export class Request {
-    private readonly basicUrl = 'https://todo-list-server-api-test.herokuapp.com/';
+    private readonly basicUrl = 'https://todo-list-server-api-test.herokuapp.com';
 
     async get(apiUrl: string) {
         const url = this.basicUrl + apiUrl;
