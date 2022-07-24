@@ -28,7 +28,7 @@ loadableReady(() => {
     if (IS_SPA) createRoot(container).render(AppContainer)
     else hydrateRoot(container, AppContainer)
 })
-
+//https://buildpack-registry.s3.amazonaws.com/buildpacks/mars/create-react-app.tgz
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker
