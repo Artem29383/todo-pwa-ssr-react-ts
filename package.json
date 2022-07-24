@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "description": "Boilerplate for study",
   "scripts": {
-    "dev": "NODE_ENV=development yarn copy:worker && cross-env webpack serve --config webpack/webpack.dev.ts --hot",
-    "build": "NODE_ENV=production cross-env webpack --config webpack/webpack.prod.ts",
-    "start": "cross-env webpack --config webpack/webpack.prod.ts && webpack --config webpack/webpack.server.ts --mode production && node build/server_build/main.js",
     "server": "node build/server_build/main.js",
     "build:server": "webpack --config webpack/webpack.server.ts --mode production",
     "copy:worker": "node tools/scripts/copy-worker.js",
     "transpile": "babel server/index.ts --out-dir dist-server",
-    "db": "node serverDB/index.ts"
+    "db": "node serverDB/index.ts",
+    "start": "node build/server_build/main.js",
+    "build": "cross-env webpack --config webpack/webpack.prod.ts && webpack --config webpack/webpack.server.ts --mode production",
+    "build:start": "cross-env webpack --config webpack/webpack.prod.ts && webpack --config webpack/webpack.server.ts --mode production && node build/server_build/main.js"
   },
   "keywords": [
     "webpack",
