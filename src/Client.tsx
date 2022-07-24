@@ -24,7 +24,7 @@ loadableReady(() => {
         </ConnectedRouter>
         </Provider>
     )
-    console.info('IS_SPA`', IS_SPA)
+    console.info('IS_SPA', IS_SPA)
     if (IS_SPA) createRoot(container).render(AppContainer)
     else hydrateRoot(container, AppContainer)
 })
